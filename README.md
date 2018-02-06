@@ -1,19 +1,16 @@
 # ![appear](https://raw.githubusercontent.com/creativelive/appear/master/assets/appear-64.png) tracker [appear branch]
 
-> Track the visibility of dom elements and fire user defined callbacks as they appear and disappear.
+> Tracker is a branch from appear.js to better support scrolling in elements such as divs as well as the window scope
 
 ## Demos
 
-- [appear.js simple test page](http://creativelive.github.io/appear/examples/simple/)
-- [appearlazy](http://creativelive.github.io/appear/examples/lazy/) - a full fledged lazy image loader that uses appear.js
-
-Be sure to view the documentation on the [project page](http://creativelive.github.io/appear/)
+- todo
 
 ## Usage
 
-Include appear.js in your page, it has no dependencies.
+Include tracker.js in your page, it has no dependencies.
 
-Call `appear()` passing in an object with the following:
+Call `new tracker()` passing in an object with the following:
 
 - `init` function to run when dom is interactive, but before appear.js has started tracking.
 - `elements` *required* function that returns an htmlcollection of elements to track. The dom will be interactive at this point. Can alternatively be an existing htmlcollection instead of a function.
@@ -33,15 +30,15 @@ appear({
   init: function init(){
     console.log('dom is ready');
   },
-  elements: function elements(){
-    // work with all elements with the class "track"
-    return document.getElementsByClassName('track');
-  },
   appear: function appear(el){
     console.log('visible', el);
   },
   disappear: function disappear(el){
     console.log('no longer visible', el);
+  },
+  element: function elements(){
+    // work with all elements with the class "track"
+    return document.getElementsByClassName('track');
   },
   bounds: 200,
   reappear: true
