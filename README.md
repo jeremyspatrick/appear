@@ -1,4 +1,4 @@
-# ![appear](https://raw.githubusercontent.com/creativelive/appear/master/assets/appear-64.png) appear
+# ![appear](https://raw.githubusercontent.com/creativelive/appear/master/assets/appear-64.png) tracker [appear branch]
 
 > Track the visibility of dom elements and fire user defined callbacks as they appear and disappear.
 
