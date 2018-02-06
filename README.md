@@ -26,7 +26,7 @@ Call `new tracker()` passing in an object with the following:
 ## Example
 
 ```javascript
-appear({
+var trackerObj = new tracker({
   init: function init(){
     console.log('dom is ready');
   },
@@ -38,16 +38,16 @@ appear({
   },
   element: function elements(){
     // work with all elements with the class "track"
-    return document.getElementsByClassName('track');
+    return document.getElementById('trackID');
   },
-  bounds: 200,
+  bounds: 0,
   reappear: true
 });
 ```
 
 ## api
 
-`appear()` will return an object with the following:
+`new tracker()` will return an object with the following:
 
 - `trigger()` force a check for viewable elements.
 - `pause()` temporarily stop tracking elements.
@@ -55,10 +55,4 @@ appear({
 - `destroy()` permanently stop tracking elements.
 
 
-## Download
 
-[source](https://raw.githubusercontent.com/creativelive/appear/master/dist/appear.js) or [minified](https://raw.githubusercontent.com/creativelive/appear/master/dist/appear.min.js)
-
----
-
-appear.js logo designed by [Magicon](http://thenounproject.com/magicon) from the [Noun Project](http://thenounproject.com/) :: Creative Commons - Attribution (CC BY 3.0)
