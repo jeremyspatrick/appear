@@ -27,18 +27,17 @@ Call `new tracker()` passing in an object with the following:
 
 ```javascript
 var trackerObj = new tracker({
-  init: function init(){
-    console.log('dom is ready');
-  },
-  appear: function appear(el){
+  appear: function(el){
     console.log('visible', el);
   },
-  disappear: function disappear(el){
+  disappear: function(el){
     console.log('no longer visible', el);
   },
-  element: function elements(){
-    // work with all elements with the class "track"
+  element: function(){
     return document.getElementById('trackID');
+  },
+  context: function(){
+    return document.getElementById('scrollingDiv');
   },
   bounds: 0,
   reappear: true
